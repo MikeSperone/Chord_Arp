@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:id="@+id/mainLayout"
+    android:textAllCaps="false" >
+
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TableRow>
+
+    <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:minHeight="40dp">
+
+            <SeekBar
+                android:id="@+id/Vol"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_span="2"
+                android:max="100"
+                android:text="@string/volume"
+                android:layout_gravity="bottom" />
+
+            <SeekBar
+                android:id="@+id/Tempo"
+                android:text="@string/tempo"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_span="2"
+                android:max="100"
+                android:layout_gravity="bottom" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:id="@+id/octaveRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="octave range"
+            android:layout_column="4"
+            android:layout_span="5" />
+
+    </TableRow>
+
+    <TableRow android:layout_width="match_parent">
+
+            <Button android:id="@+id/GbM" android:tag="GbM" android:text="@string/GbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/DbM" android:tag="DbM" android:text="@string/DbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/AbM" android:tag="AbM" android:text="@string/AbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/EbM" android:tag="EbM" android:text="@string/EbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/BbM" android:tag="BbM" android:text="@string/BbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/FM" android:tag="FM" android:text="@string/FMaj" android:onClick="onChordClick" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  .        "
+                android:layout_column="7" />
+
+        <ToggleButton
+            android:id="@+id/timbre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/sawTooth"
+            android:textOff="@string/sineTone"
+            android:onClick="onTimbreClick"
+            android:layout_column="8" />
+
+    </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <Button android:id="@+id/ebm" android:tag="ebm" android:text="@string/ebmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/bbm" android:tag="bbm" android:text="@string/bbmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/fm" android:tag="fm" android:text="@string/fmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/cm" android:tag="cm" android:text="@string/cmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/gm" android:tag="gm" android:text="@string/gmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/dm" android:tag="dm" android:text="@string/dmin" android:onClick="onChordClick" />
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <Button android:id="@+id/BbM_1" android:tag="BbM" android:text="@string/BbMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/FM_1" android:tag="FM" android:text="@string/FMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/CM" android:tag="CM" android:text="@string/CMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/GM" android:tag="GM" android:text="@string/GMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/DM" android:tag="DM" android:text="@string/DMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/AM" android:tag="AM" android:text="@string/AMaj" android:onClick="onChordClick" />
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <Button android:id="@+id/gm_1" android:tag="gm" android:text="@string/gmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/dm_1" android:tag="dm" android:text="@string/dmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/am" android:tag="am" android:text="@string/amin" android:onClick="onChordClick" />
+            <Button android:id="@+id/em" android:tag="em" android:text="@string/emin" android:onClick="onChordClick" />
+            <Button android:id="@+id/bm" android:tag="bm" android:text="@string/bmin" android:onClick="onChordClick" />
+            <Button android:id="@+id/fsm" android:tag="fsm" android:text="@string/fsmin" android:onClick="onChordClick" />
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <Button android:id="@+id/DM_1" android:tag="DM" android:text="@string/DMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/AM_1" android:tag="AM" android:text="@string/AMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/EM" android:tag="EM" android:text="@string/EMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/BM" android:tag="BM" android:text="@string/BMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/FSM" android:tag="GbM" android:text="@string/FSMaj" android:onClick="onChordClick" />
+            <Button android:id="@+id/CSM" android:tag="CSM" android:text="@string/CSMaj" android:onClick="onChordClick" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  .       "
+                android:layout_column="7" />
+            <ToggleButton
+                android:id="@+id/IO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:onClick="onIoClick"
+                android:layout_column="8" />
+        </TableRow>
+
+</TableLayout>
+

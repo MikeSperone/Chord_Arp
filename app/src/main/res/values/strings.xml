@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ChordArp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="on">on</string>
+    <string name="off">off</string>
+
+    <string name="volume">Volume</string>
+    <string name="tempo">Tempo</string>
+
+    <string name="sawTooth">saw</string>
+    <string name="sineTone">sine</string>
+
+    <string name="GbMaj">GbM</string>
+    <string name="DbMaj">DbM</string>
+    <string name="AbMaj">AbM</string>
+    <string name="EbMaj">EbM</string>
+    <string name="BbMaj">BbM</string>
+    <string name="FMaj">FM</string>
+
+    <string name="ebmin">ebm</string>
+    <string name="bbmin">bbm</string>
+    <string name="fmin">fm</string>
+    <string name="cmin">cm</string>
+    <string name="gmin">gm</string>
+    <string name="dmin">dm</string>
+
+    <string name="CMaj">CM</string>
+    <string name="GMaj">GM</string>
+    <string name="DMaj">DM</string>
+    <string name="AMaj">AM</string>
+    <string name="amin">am</string>
+    <string name="emin">em</string>
+    <string name="bmin">bm</string>
+    <string name="fsmin">fsm</string>
+    <string name="EMaj">EM</string>
+    <string name="BMaj">BM</string>
+    <string name="FSMaj">FSM</string>
+    <string name="CSMaj">CSM</string>
+</resources>

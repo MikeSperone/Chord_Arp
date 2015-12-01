@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="/Users/katfox/AndroidStudioProjects/MyApplication/PdCore/build/intermediates/exploded-aar/MyApplication/AndroidMidi/unspecified/assets"/></dataSet><dataSet config="debug"><source path="/Users/katfox/AndroidStudioProjects/MyApplication/PdCore/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/Users/katfox/AndroidStudioProjects/MyApplication/PdCore/src/androidTest/assets"/></dataSet></merger>
