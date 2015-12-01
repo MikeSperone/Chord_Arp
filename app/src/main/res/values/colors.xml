@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="bright_foreground_disabled_holo_dark">#535252</color>
+    <color name="bright_foreground_holo_dark">#f3f3f3</color>
+    <color name="primary_material_light">#000000</color>
+    <color name="colorBackground">#222222</color>
+    <color name="buttonColor">#676767</color>
+    <color name="background_material_light">#222222</color>
+    <color name="backgroundColor">#222222</color>
+    <color name="background_dark">#000000</color>
 </resources>
