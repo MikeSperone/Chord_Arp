@@ -103,7 +103,7 @@
             <Button android:id="@+id/EM" android:tag="EM" android:text="@string/EMaj" android:onClick="onChordClick" android:textAllCaps="false" />
             <Button android:id="@+id/BM" android:tag="BM" android:text="@string/BMaj" android:onClick="onChordClick" android:textAllCaps="false" />
             <Button android:id="@+id/FSM" android:tag="GbM" android:text="@string/FSMaj" android:onClick="onChordClick" android:textAllCaps="false" />
-            <Button android:id="@+id/CSM" android:tag="CSM" android:text="@string/CSMaj" android:onClick="onChordClick" android:textAllCaps="false" />
+            <Button android:id="@+id/CSM" android:tag="CSM" android:text="@string/CSMaj" android:onClick="onChordClick"  />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
