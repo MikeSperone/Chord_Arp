@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="0"
+        android:text=".5"
         android:id="@+id/volText"
         android:layout_column="1"
         android:layout_row="0" />
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="0"
+        android:text="3.0"
         android:id="@+id/tempoText"
         android:layout_column="3"
         android:layout_row="0" />
@@ -51,7 +51,7 @@
         android:layout_height="60dp"
         android:text="octave range"
         android:baselineAlignBottom="false"
-        android:adjustViewBounds="true"
+        android:adjustViewBounds="false"
         android:layout_row="0"
         android:layout_column="4"
         android:layout_rowSpan="2"
@@ -62,6 +62,7 @@
         android:layout_width="174dp"
         android:layout_height="40dp"
         android:max="100"
+        android:progress="50"
         android:text="@string/volume"
         android:layout_gravity="bottom"
         android:layout_row="1"
@@ -74,12 +75,13 @@
         android:layout_width="174dp"
         android:layout_height="40dp"
         android:max="100"
+        android:progress="30"
         android:layout_gravity="bottom"
         android:layout_row="1"
         android:layout_column="2"
         android:layout_columnSpan="2" />
 
-    <Button android:id="@+id/GbM" android:tag="GbM" android:text="@string/GbMaj" android:onClick="onChordClick" android:textAllCaps="false"
+        <Button android:id="@+id/GbM" android:tag="GbM" android:text="@string/GbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
         android:layout_column="0" />
 
