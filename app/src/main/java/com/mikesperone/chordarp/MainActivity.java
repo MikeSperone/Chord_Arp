@@ -30,17 +30,19 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private PdUiDispatcher dispatcher;
-    private ToggleButton IO;
-    private ToggleButton timbre;
-    private float tempo_amount;
-    private float vol_level;
+
     private float octave_base;
     private float octave_range;
 
     private TextView volText;
     private TextView tempoText;
-    private TextView octBaseText;
-    private TextView octRangeText;
+    private float maxVolume;
+
+    float tempoInit = 3;
+    float octBaseInit = 3;
+    float octRangeInit = 6;
+    float timbreInit = 1;
+    float volumeInit = .8f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void pdsetUp() {
         //initial values
-        float tempoInit = 3;
-        float octBaseInit = 3;
-        float octRangeInit = 6;
-        float timbreInit = 1;
-
-        //PdBase.sendFloat("octave", octaveInit);
         PdBase.sendFloat("tempo", tempoInit);
         PdBase.sendFloat("timbre", timbreInit);
         PdBase.sendFloat("octaveBase", octBaseInit);
         PdBase.sendFloat("octaveRange", octRangeInit);
+        PdBase.sendFloat("volume", volumeInit);
     }
 
     private void initGui() {
@@ -79,24 +76,21 @@ public class MainActivity extends AppCompatActivity {
         SeekBar Tempo = (SeekBar) findViewById(R.id.Tempo);
         Tempo.setOnSeekBarChangeListener(new Sliders());
 
-//        volText = (TextView)findViewById(R.id.volText);
-//        tempoText = (TextView)findViewById(R.id.tempoText);
-//        octBaseText = (TextView)findViewById(R.id.octBaseText);
-//        octRangeText = (TextView)findViewById(R.id.octRangeText);
+        volText = (TextView)findViewById(R.id.volText);
+        volText.setText(volumeInit);
+        tempoText = (TextView)findViewById(R.id.tempoText);
+        tempoText.setText(tempoInit);
+
         RangeSeekBar octaves = (RangeSeekBar) findViewById(R.id.octaveRange);
         octaves.setRangeValues(1, 8);
         octaves.setSelectedMinValue(3);
         octaves.setSelectedMaxValue(6);
-        //RangeSeekBar<Integer> octaveRange = new RangeSeekBar(this);
         octaves.setOnRangeSeekBarChangeListener(new RangeSeekBar.OnRangeSeekBarChangeListener<Integer>() {
             @Override
             public void onRangeSeekBarValuesChanged(RangeSeekBar<?> bar, Integer minValue, Integer maxValue) {
                 OctaveRangeDoStuff(minValue, maxValue);
             }
         });
-
-        IO = (ToggleButton) findViewById(R.id.IO);
-        timbre = (ToggleButton) findViewById(R.id.timbre);
 
         //First Row
         Button GbM = (Button) findViewById(R.id.GbM);
@@ -163,11 +157,13 @@ public class MainActivity extends AppCompatActivity {
         ToggleButton timbre = (ToggleButton) v;
         if (timbre.isChecked()) {
             PdBase.sendFloat("timbre", 0);
-            Log.d(TAG, "sawtooth wave");
+            //Log.d(TAG, "sawtooth wave");
+            maxVolume = 1f;
             timbre.setChecked(true);
         } else {
             PdBase.sendFloat("timbre",  1);
-            Log.d(TAG, "sine wave");
+            //Log.d(TAG, "sine wave");
+            maxVolume = .5f;
             timbre.setChecked(false);
         }
     }
@@ -183,19 +179,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class Sliders implements SeekBar.OnSeekBarChangeListener {
+        private float tempo_amount;
+        private float vol_level;
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             switch(seekBar.getId()) {
                 case R.id.Vol:
-                    vol_level = (float) (progress / 120.);
-                    PdBase.sendFloat("volume", vol_level);
-                    //String vol_string = Float.toString(vol_level);
-                    //volText.setText("volume: " + vol_string);
+                    vol_level = (float) (progress / 100.);
+                    PdBase.sendFloat("volume", vol_level*maxVolume);
+                    String vol_string = Float.toString(vol_level);
+                    volText.setText(vol_string);
                     break;
                 case R.id.Tempo:
                     tempo_amount = (float) (progress/10.);
-                    //String tempo_string = Float.toString(tempo_amount);
-                    //tempoText.setText("speed: "+tempo_string);
+                    String tempo_string = Float.toString(tempo_amount);
+                    tempoText.setText(tempo_string);
                     tempo_amount = 10 - tempo_amount;
                     PdBase.sendFloat("tempo", tempo_amount);
                     break;
