@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Tempo.setOnSeekBarChangeListener(new Sliders());
 
         volText = (TextView)findViewById(R.id.volText);
-        volText.setText(volumeInit);
+        volText.setText(Float.toString(volumeInit));
         tempoText = (TextView)findViewById(R.id.tempoText);
-        tempoText.setText(tempoInit);
+        tempoText.setText(Float.toString(tempoInit));
 
         RangeSeekBar octaves = (RangeSeekBar) findViewById(R.id.octaveRange);
         octaves.setRangeValues(1, 8);
