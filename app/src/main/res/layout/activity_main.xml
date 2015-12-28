@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:shrinkColumns="*"
     android:stretchColumns="*"
     android:id="@+id/mainLayout"
     android:rowCount="7"
-    android:columnCount="7">
+    android:columnCount="7"
+    android:foregroundGravity="center">
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,26 +46,22 @@
         android:layout_column="3"
         android:layout_row="0" />
 
-    <org.florescu.android.rangeseekbar.RangeSeekBar
-        android:id="@+id/octaveRange"
-        android:layout_width="259dp"
-        android:layout_height="60dp"
-        android:text="octave range"
-        android:baselineAlignBottom="false"
-        android:adjustViewBounds="false"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Octave Range"
+        android:id="@+id/rangeLabel"
         android:layout_row="0"
         android:layout_column="4"
-        android:layout_rowSpan="2"
-        android:layout_columnSpan="3" />
+        android:layout_columnSpan="2" />
 
     <SeekBar
         android:id="@+id/Vol"
-        android:layout_width="174dp"
-        android:layout_height="40dp"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
         android:max="100"
         android:progress="50"
         android:text="@string/volume"
-        android:layout_gravity="bottom"
         android:layout_row="1"
         android:layout_column="0"
         android:layout_columnSpan="2" />
@@ -73,29 +70,47 @@
         android:id="@+id/Tempo"
         android:text="@string/tempo"
         android:layout_width="174dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:max="100"
         android:progress="30"
-        android:layout_gravity="bottom"
         android:layout_row="1"
         android:layout_column="2"
         android:layout_columnSpan="2" />
 
-        <Button android:id="@+id/GbM" android:tag="GbM" android:text="@string/GbMaj" android:onClick="onChordClick" android:textAllCaps="false"
+    <org.florescu.android.rangeseekbar.RangeSeekBar
+        android:id="@+id/octaveRange"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:text="octave range"
+        android:baselineAlignBottom="false"
+        android:adjustViewBounds="false"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:layout_columnSpan="3" />
+
+    <Button android:id="@+id/GbM" android:tag="GbM" android:text="@string/GbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     <Button android:id="@+id/DbM" android:tag="DbM" android:text="@string/DbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/AbM" android:tag="AbM" android:text="@string/AbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/EbM" android:tag="EbM" android:text="@string/EbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/BbM" android:tag="BbM" android:text="@string/BbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
@@ -105,7 +120,9 @@
 
     <Button android:id="@+id/FM" android:tag="FM" android:text="@string/FMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="2"
-        android:layout_column="5" />
+        android:layout_column="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ToggleButton
         android:id="@+id/timbre"
@@ -119,103 +136,147 @@
 
     <Button android:id="@+id/ebm" android:tag="ebm" android:text="@string/ebmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/bbm" android:tag="bbm" android:text="@string/bbmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/fm" android:tag="fm" android:text="@string/fmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/cm" android:tag="cm" android:text="@string/cmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/gm" android:tag="gm" android:text="@string/gmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
         android:layout_column="4"
-        android:layout_width="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/dm" android:tag="dm" android:text="@string/dmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="3"
-        android:layout_column="5" />
+        android:layout_column="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/GM" android:tag="GM" android:text="@string/GMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/DM" android:tag="DM" android:text="@string/DMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
         android:layout_column="4"
-        android:layout_width="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/gm_1" android:tag="gm" android:text="@string/gmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/dm_1" android:tag="dm" android:text="@string/dmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/am" android:tag="am" android:text="@string/amin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/em" android:tag="em" android:text="@string/emin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/bm" android:tag="bm" android:text="@string/bmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
         android:layout_column="4"
-        android:layout_width="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/fsm" android:tag="fsm" android:text="@string/fsmin" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="5"
-        android:layout_column="5" />
+        android:layout_column="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/BbM_1" android:tag="BbM" android:text="@string/BbMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/FM_1" android:tag="FM" android:text="@string/FMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/CM" android:tag="CM" android:text="@string/CMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/AM" android:tag="AM" android:text="@string/AMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="4"
-        android:layout_column="5" />
+        android:layout_column="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/DM_1" android:tag="DM" android:text="@string/DMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="6"
-        android:layout_column="0" />
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/AM_1" android:tag="AM" android:text="@string/AMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="6"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/EM" android:tag="EM" android:text="@string/EMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="6"
-        android:layout_column="2" />
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/BM" android:tag="BM" android:text="@string/BMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="6"
-        android:layout_column="3" />
+        android:layout_column="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/FSM" android:tag="GbM" android:text="@string/FSMaj" android:onClick="onChordClick" android:textAllCaps="false"
         android:layout_row="6"
         android:layout_column="4"
-        android:layout_width="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button android:id="@+id/CSM" android:tag="CSM" android:text="@string/CSMaj" android:onClick="onChordClick"
         android:layout_row="6"
-        android:layout_column="5" />
+        android:layout_column="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ToggleButton
             android:id="@+id/IO"
